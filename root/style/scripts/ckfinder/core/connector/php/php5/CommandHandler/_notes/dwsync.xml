@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="CommandHandlerBase.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="CopyFiles.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="CreateFolder.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="DeleteFiles.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="DeleteFolder.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="DownloadFile.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="FileUpload.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="GetFiles.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="GetFolders.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="Init.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="LoadCookies.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="MoveFiles.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="QuickUpload.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="RenameFile.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="RenameFolder.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="Thumbnail.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+<file name="XmlCommandHandlerBase.php" server="sedek.com.br" local="130332411880000000" remote="130415587800000000" Dst="1" />
+</dwsync>

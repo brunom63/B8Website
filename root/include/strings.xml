@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<strings>
+
+
+<string1>
+	<portuguese>Início</portuguese>
+	<english>Home</english>
+	<german>Home</german>
+</string1>
+
+<string2>
+	<portuguese>Categorias</portuguese>
+	<english>Categories</english>
+	<german>Kategorien</german>
+</string2>
+
+<string3>
+	<portuguese>Posts</portuguese>
+	<english>Posts</english>
+	<german>Posts</german>
+</string3>
+
+<string4>
+	<portuguese>Páginas</portuguese>
+	<english>Pages</english>
+	<german>Seiten</german>
+</string4>
+
+<string5>
+	<portuguese>Imagens</portuguese>
+	<english>Images</english>
+	<german>Bilder</german>
+</string5>
+
+<string6>
+	<portuguese>Newsletters</portuguese>
+	<english>Newsletters</english>
+	<german>Newsletter</german>
+</string6>
+
+<string7>
+	<portuguese>Cadastrados</portuguese>
+	<english>Members</english>
+	<german>Mitglieder</german>
+</string7>
+
+<string8>
+	<portuguese>Contatos</portuguese>
+	<english>Contacts</english>
+	<german>Kontakte</german>
+</string8>
+
+<string9>
+	<portuguese>Usuários</portuguese>
+	<english>Users</english>
+	<german>Benutzer</german>
+</string9>
+
+<string10>
+	<portuguese>Configurações</portuguese>
+	<english>Configurations</english>
+	<german>Konfiguration</german>
+</string10>
+
+<string11>
+	<portuguese>Olá</portuguese>
+	<english>Hi</english>
+	<german>Hallo</german>
+</string11>
+
+<string12>
+	<portuguese>Sair</portuguese>
+	<english>Logoff</english>
+	<german>Ausloggen</german>
+</string12>
+
+<string13>
+	<portuguese>Bem vindo(a)</portuguese>
+	<english>Welcome</english>
+	<german>Willkommen</german>
+</string13>
+
+<string14>
+	<portuguese>Seu último acesso foi:</portuguese>
+	<english>Your last login was:</english>
+	<german>Letzter Login</german>
+</string14>
+
+<string15>
+	<portuguese>Inserir</portuguese>
+	<english>Add</english>
+	<german>Einfügen</german>
+</string15>
+
+<string16>
+	<portuguese>Editar</portuguese>
+	<english>Edit</english>
+	<german>Bearbeiten</german>
+</string16>
+
+<string17>
+	<portuguese>Voltar</portuguese>
+	<english>Back</english>
+	<german>Zurück</german>
+</string17>
+
+<string18>
+	<portuguese>Novo</portuguese>
+	<english>New</english>
+	<german>Neu</german>
+</string18>
+
+<string19>
+	<portuguese>Pesquisar</portuguese>
+	<english>Search</english>
+	<german>Suchen</german>
+</string19>
+
+<string20>
+	<portuguese>Enviar</portuguese>
+	<english>Send</english>
+	<german>Senden</german>
+</string20>
+
+<string21>
+	<portuguese>Limpar</portuguese>
+	<english>Clear</english>
+	<german>Leeren</german>
+</string21>
+
+<string22>
+	<portuguese>Ativar</portuguese>
+	<english>Activate</english>
+	<german>Aktivieren</german>
+</string22>
+
+<string23>
+	<portuguese>Desativar</portuguese>
+	<english>Deactivate</english>
+	<german>Deaktivieren</german>
+</string23>
+
+<string24>
+	<portuguese>Copiar</portuguese>
+	<english>Copy</english>
+	<german>Kopieren</german>
+</string24>
+
+<string25>
+	<portuguese>Remover</portuguese>
+	<english>Remove</english>
+	<german>Entfernen</german>
+</string25>
+
+<string26>
+	<portuguese>Título</portuguese>
+	<english>Title</english>
+	<german>Titel</german>
+</string26>
+
+<string27>
+	<portuguese>Status</portuguese>
+	<english>Status</english>
+	<german>Status</german>
+</string27>
+
+<string28>
+	<portuguese>Destaque</portuguese>
+	<english>Featured</english>
+	<german>Features</german>
+</string28>
+
+<string29>
+	<portuguese>Categoria</portuguese>
+	<english>Category</english>
+	<german>Kategorie</german>
+</string29>
+
+<string30>
+	<portuguese>Data</portuguese>
+	<english>Date</english>
+	<german>Datum</german>
+</string30>
+
+<string31>
+	<portuguese>Hits</portuguese>
+	<english>Views</english>
+	<german>Views</german>
+</string31>
+
+<string32>
+	<portuguese>ID</portuguese>
+	<english>ID</english>
+	<german>ID</german>
+</string32>
+
+<string33>
+	<portuguese>Lista</portuguese>
+	<english>List</english>
+	<german>Liste</german>
+</string33>
+
+<string34>
+	<portuguese>Enviados</portuguese>
+	<english>Sent</english>
+	<german>Gesendet</german>
+</string34>
+
+<string35>
+	<portuguese>Usuários</portuguese>
+	<english>Users</english>
+	<german>Benutzer</german>
+</string35>
+
+<string36>
+	<portuguese>Nome</portuguese>
+	<english>Name</english>
+	<german>Name</german>
+</string36>
+
+<string37>
+	<portuguese>E-mail</portuguese>
+	<english>E-mail</english>
+	<german>E-mail</german>
+</string37>
+
+<string38>
+	<portuguese>Assunto</portuguese>
+	<english>Subject</english>
+	<german>Betreff</german>
+</string38>
+
+<string39>
+	<portuguese>Tipo</portuguese>
+	<english>Type</english>
+	<german>Typ</german>
+</string39>
+
+<string40>
+	<portuguese>Admin</portuguese>
+	<english>Admin</english>
+	<german>Admin</german>
+</string40>
+
+<string41>
+	<portuguese>E-mails</portuguese>
+	<english>E-mails</english>
+	<german>E-mails</german>
+</string41>
+
+<string42>
+	<portuguese>Autor</portuguese>
+	<english>Author</english>
+	<german>Autor</german>
+</string42>
+
+<string43>
+	<portuguese>Alias</portuguese>
+	<english>Alias</english>
+	<german>Alias</german>
+</string43>
+
+<string44>
+	<portuguese>Data Início</portuguese>
+	<english>Initial Date</english>
+	<german>Anfangsdatum</german>
+</string44>
+
+<string45>
+	<portuguese>Data Fim</portuguese>
+	<english>End Date</english>
+	<german>Enddatum</german>
+</string45>
+
+<string46>
+	<portuguese>Descrição</portuguese>
+	<english>Description</english>
+	<german>Beschreibung</german>
+</string46>
+
+<string47>
+	<portuguese>Tags</portuguese>
+	<english>Tags</english>
+	<german>Tags</german>
+</string47>
+
+<string48>
+	<portuguese>Criado por</portuguese>
+	<english>Created by</english>
+	<german>Kreiert von</german>
+</string48>
+
+<string49>
+	<portuguese>Criado</portuguese>
+	<english>Created</english>
+	<german>Kreiert</german>
+</string49>
+
+<string50>
+	<portuguese>Alterado</portuguese>
+	<english>Edited</english>
+	<german>Geändert</german>
+</string50>
+
+<string51>
+	<portuguese>Corpo</portuguese>
+	<english>Body</english>
+	<german>Textkörper</german>
+</string51>
+
+<string52>
+	<portuguese>Campo 1</portuguese>
+	<english>Field 1</english>
+	<german>Feld 1</german>
+</string52>
+
+<string53>
+	<portuguese>Campo 2</portuguese>
+	<english>Field 2</english>
+	<german>Feld 2</german>
+</string53>
+
+<string54>
+	<portuguese>Campo 3</portuguese>
+	<english>Field 3</english>
+	<german>Feld 3</german>
+</string54>
+
+<string55>
+	<portuguese>Galeria</portuguese>
+	<english>Gallery</english>
+	<german>Gallerie</german>
+</string55>
+
+<string56>
+	<portuguese>Código</portuguese>
+	<english>Code</english>
+	<german>Code</german>
+</string56>
+
+<string57>
+	<portuguese>Especial</portuguese>
+	<english>Special</english>
+	<german>Spezial</german>
+</string57>
+
+<string58>
+	<portuguese>Usuário</portuguese>
+	<english>User</english>
+	<german>Benutzer</german>
+</string58>
+
+<string59>
+	<portuguese>Senha</portuguese>
+	<english>Password</english>
+	<german>Passwort</german>
+</string59>
+
+<string60>
+	<portuguese>Repetir Senha</portuguese>
+	<english>Repeat Password</english>
+	<german>Passwort wiederholen</german>
+</string60>
+
+<string61>
+	<portuguese>Informações</portuguese>
+	<english>Information</english>
+	<german>Informationen</german>
+</string61>
+
+<string62>
+	<portuguese>Mensagem</portuguese>
+	<english>Message</english>
+	<german>Nachricht</german>
+</string62>
+
+<string63>
+	<portuguese>Para</portuguese>
+	<english>To</english>
+	<german>An</german>
+</string63>
+
+<string64>
+	<portuguese>De</portuguese>
+	<english>From</english>
+	<german>Von</german>
+</string64>
+
+<string65>
+	<portuguese>Administrador</portuguese>
+	<english>Administrator</english>
+	<german>Administrator</german>
+</string65>
+
+<string66>
+	<portuguese>Acessos</portuguese>
+	<english>Logins</english>
+	<german>Logins</german>
+</string66>
+
+<string67>
+	<portuguese>Permissões</portuguese>
+	<english>Permitted</english>
+	<german>Zulassungen</german>
+</string67>
+
+<string68>
+	<portuguese>Salvar</portuguese>
+	<english>Save</english>
+	<german>Speichern</german>
+</string68>
+
+<string69>
+	<portuguese>E-mails</portuguese>
+	<english>E-mails</english>
+	<german>E-mails</german>
+</string69>
+
+<string70>
+	<portuguese>Nome de Envio</portuguese>
+	<english>Sending name</english>
+	<german>Absender</german>
+</string70>
+
+<string71>
+	<portuguese>Endereço de E-mail</portuguese>
+	<english>E-mail address</english>
+	<german>E-mail-Adresse</german>
+</string71>
+
+<string72>
+	<portuguese>Minha Conta</portuguese>
+	<english>My Account</english>
+	<german>Mein Konto</german>
+</string72>
+
+<string73>
+	<portuguese>Administração</portuguese>
+	<english>Administration</english>
+	<german>Verwaltung</german>
+</string73>
+
+<string74>
+	<portuguese>Enviar</portuguese>
+	<english>Send</english>
+	<german>Senden</german>
+</string74>
+
+<string75>
+	<portuguese>Responder</portuguese>
+	<english>Answer</english>
+	<german>Antworten</german>
+</string75>
+
+<string76>
+	<portuguese>Endereço</portuguese>
+	<english>Address</english>
+	<german>Adresse</german>
+</string76>
+
+<string77>
+	<portuguese>Enviar</portuguese>
+	<english>Send</english>
+	<german>Senden</german>
+</string77>
+
+<string78>
+	<portuguese>Ativado</portuguese>
+	<english>Active</english>
+	<german>Aktiv</german>
+</string78>
+
+<string79>
+	<portuguese>Campo 4</portuguese>
+	<english>Field 4</english>
+	<german>Feld 4</german>
+</string79>
+
+<string80>
+	<portuguese>pt-br</portuguese>
+	<english>en</english>
+	<german>de</german>
+</string80>
+
+<string81>
+	<portuguese>Upload</portuguese>
+	<english>Upload</english>
+	<german>Hochladen</german>
+</string81>
+
+<string82>
+	<portuguese>Legenda</portuguese>
+	<english>Description</english>
+	<german>Beschreibung</german>
+</string82>
+
+<string83>
+	<portuguese>Emissor</portuguese>
+	<english>Sent By</english>
+	<german>Per</german>
+</string83>
+
+<string84>
+	<portuguese>Login</portuguese>
+	<english>Login</english>
+	<german>Login</german>
+</string84>
+
+<string85>
+	<portuguese>Atenção</portuguese>
+	<english>Warning</english>
+	<german>Warnung</german>
+</string85>
+
+<string86>
+	<portuguese>Idioma</portuguese>
+	<english>Language</english>
+	<german>Sprache</german>
+</string86>
+
+<string87>
+	<portuguese>Português</portuguese>
+	<english>Português</english>
+	<german>Português</german>
+</string87>
+
+<string88>
+	<portuguese>English</portuguese>
+	<english>English</english>
+	<german>English</german>
+</string88>
+
+<string89>
+	<portuguese>Deutsche</portuguese>
+	<english>Deutsche</english>
+	<german>Deutsche</german>
+</string89>
+
+<string90>
+	<portuguese>Você tentou acessar uma página que está indisponível no momento.</portuguese>
+	<english>You tried to access a page that is unavailable at the moment.</english>
+	<german></german>
+</string90>
+
+<string91>
+	<portuguese>Se esse problema persistir, entre em contato com o administrador e informe o ocorrido.</portuguese>
+	<english>If the problem persists, contact the administrator and report the problem.</english>
+	<german></german>
+</string91>
+
+<string92>
+	<portuguese>Use o "Voltar" do seu navegador para retornar à página anterior.</portuguese>
+	<english>Use the "Back" button of your browser to return to the last page.</english>
+	<german></german>
+</string92>
+
+<string93>
+	<portuguese>Itens excluídos com sucesso.</portuguese>
+	<english>Items deleted.</english>
+	<german></german>
+</string93>
+
+<string94>
+	<portuguese>Itens ativados com sucesso.</portuguese>
+	<english>Items activated.</english>
+	<german></german>
+</string94>
+
+<string95>
+	<portuguese>Itens desativados com sucesso.</portuguese>
+	<english>Items deactivated.</english>
+	<german></german>
+</string95>
+
+<string96>
+	<portuguese>Itens copiados com sucesso.</portuguese>
+	<english>Items copied.</english>
+	<german></german>
+</string96>
+
+<string97>
+	<portuguese>Nenhum item foi selecionado.</portuguese>
+	<english>Select at least one item.</english>
+	<german></german>
+</string97>
+
+<string98>
+	<portuguese>Item ativado com sucesso.</portuguese>
+	<english>Item activated.</english>
+	<german></german>
+</string98>
+
+<string99>
+	<portuguese>Item desativado com sucesso.</portuguese>
+	<english>Item deactivated.</english>
+	<german></german>
+</string99>
+
+<string100>
+	<portuguese>Item marcado como destaque.</portuguese>
+	<english>Item marked as featured.</english>
+	<german></german>
+</string100>
+
+<string101>
+	<portuguese>Item desmarcado como destaque.</portuguese>
+	<english>Item unmarked as featured.</english>
+	<german></german>
+</string101>
+
+<string102>
+	<portuguese>Item marcado como administrador.</portuguese>
+	<english>Item marked as administrator.</english>
+	<german></german>
+</string102>
+
+<string103>
+	<portuguese>Item desmarcado como administrador.</portuguese>
+	<english>Item unmarked as administrator.</english>
+	<german></german>
+</string103>
+
+<string104>
+	<portuguese>Dados inválidos! Preencha os campos corretamente.</portuguese>
+	<english>Invalid data! Fill all the required fields.</english>
+	<german></german>
+</string104>
+
+<string105>
+	<portuguese>Usuário existente. Escolha outro login.</portuguese>
+	<english>User already exists. Choose a different login.</english>
+	<german></german>
+</string105>
+
+<string106>
+	<portuguese>Senhas não conferem. Verifique se são iguais.</portuguese>
+	<english>Passwords are not equal.</english>
+	<german></german>
+</string106>
+
+<string107>
+	<portuguese>Dados enviados com sucesso.</portuguese>
+	<english>Data successfully sent.</english>
+	<german></german>
+</string107>
+
+<string108>
+	<portuguese>Ver Relatório</portuguese>
+	<english>Check Report</english>
+	<german></german>
+</string108>
+
+<string109>
+	<portuguese>Itens em processo de envio. Veja o relatório para acompanhar.</portuguese>
+	<english>Items are being sent. Follow along by checking the report.</english>
+	<german></german>
+</string109>
+
+<string110>
+	<portuguese>Relatório</portuguese>
+	<english>Report</english>
+	<german></german>
+</string110>
+
+<string111>
+	<portuguese>Newsletter ainda não foi enviada.</portuguese>
+	<english>Newsletter has not been sent yet.</english>
+	<german></german>
+</string111>
+
+<string112>
+	<portuguese>Documentos</portuguese>
+	<english>Documents</english>
+	<german>Unterlagen</german>
+</string112>
+
+
+</strings>
