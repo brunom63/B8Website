@@ -99,9 +99,14 @@ $query = "SELECT * FROM sdk_cadastrados WHERE ".$website->db_id."=".$website->it
 $result = $website->sql_db($query);
 $website->item = $website->fetch_array_db($result);
 	
-$query = "SELECT * FROM sdk_admlogin WHERE dt_id=".$website->item['dt_criado_por'];
-$result = $website->sql_db($query);
-$criado = $website->fetch_array_db($result);
+$criado = array();
+if ($website->item['dt_criado_por'] != "") {
+    $query = "SELECT * FROM sdk_admlogin WHERE dt_id=".$website->item['dt_criado_por'];
+    $result = $website->sql_db($query);
+    $criado = $website->fetch_array_db($result);
+} else {
+    $criado['dt_campo1'] = '-';
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
