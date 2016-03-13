@@ -73,6 +73,13 @@ if ($website->p_id == 0) $website->page_redirect('index.php');
                 <p><span class="rt_bdyico"><?php echo $website->get_string(5); ?></span></p>
               </a>
             </div>
+            <?php } if (in_array(14, $website->user_permissao)) { ?>
+            <div class="col-xs-4 text-center">
+              <a class="rt_bdymn" href="produtos.php">
+                <i class="fa fa-shopping-cart fa-4x"></i>
+                <p><span class="rt_bdyico"><?php echo $website->get_string(113); ?></span></p>
+              </a>
+            </div>
             <?php } if (in_array(8, $website->user_permissao)) { ?>
             <div class="col-xs-4 text-center">
               <a class="rt_bdymn" href="newsletters.php">

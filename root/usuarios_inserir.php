@@ -239,6 +239,10 @@ if ($website->form_checktrigger()) {
                                 </div>
                             </div>
                             <div class="row">
+                                <label for="frm114" class="col-sm-2 control-label"><?php echo $website->get_string(113); ?></label>
+                                <div class="col-sm-1 rt_d">
+                                  <input type="checkbox" id="frm114" name="f_frm100[]" value="14"<?php if (!isset($website->form_values['frm100']) || in_array(14, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>
+                                </div>
                                 <label for="frm108" class="col-sm-2 control-label"><?php echo $website->get_string(6); ?></label>
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm108" name="f_frm100[]" value="8"<?php if (!isset($website->form_values['frm100']) || in_array(8, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>

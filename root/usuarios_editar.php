@@ -256,6 +256,10 @@ if ($website->item['dt_criado_por'] != '') {
                                 </div>
                             </div>
                             <div class="row">
+                                <label for="frm114" class="col-sm-2 control-label"><?php echo $website->get_string(113); ?></label>
+                                <div class="col-sm-1 rt_d">
+                                  <input type="checkbox" id="frm114" name="f_frm100[]" value="14"<?php echo (isset($website->form_values['frm100']) && in_array(14, $website->form_values['frm100'])) ? ' checked="checked"' : ((in_array(14, $item_permissao)) ? ' checked="checked"' : ''); ?>>
+                                </div>
                                 <label for="frm108" class="col-sm-2 control-label"><?php echo $website->get_string(6); ?></label>
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm108" name="f_frm100[]" value="8"<?php echo (isset($website->form_values['frm100']) && in_array(8, $website->form_values['frm100'])) ? ' checked="checked"' : ((in_array(8, $item_permissao)) ? ' checked="checked"' : ''); ?>>
