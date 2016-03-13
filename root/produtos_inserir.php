@@ -6,7 +6,7 @@ $website = new B8Admin();
 if ($website->p_id == 0) $website->page_redirect('index.php');
 if (!in_array(2, $website->user_permissao)) $website->page_redirect('index.php');
 
-$website->modules_list = array('datetimepicker', 'ckfinder', 'multiupload', 'multifileupload');
+$website->modules_list = array('datetimepicker', 'ckfinder', 'multiupload');
 	
 $website->form_trigger = 'f_send';
 $website->form_populate = array(
@@ -16,20 +16,17 @@ $website->form_populate = array(
 	'frm3'  => array('bigtext', FALSE, 'Data Início'),
 	'frm4'  => array('bigtext', FALSE, 'Data Fim'),
 	'frm5'  => array('number', FALSE, 'Ativado'),
-	'frm6'  => array('number', FALSE, 'Destaque'),
+	'frm6'  => array('number', FALSE, 'Finalizado'),
 	'frm8'  => array('bigtext', FALSE, 'Meta Descrição'),
 	'frm9'  => array('hugtext', FALSE, 'Meta Tags'),	
 	'frm10' => array('bigtext', TRUE, 'Título'),
-	'frm11' => array('hugtext', FALSE, 'Corpo'),
-    'frm12' => array('hugtext', FALSE, 'Código'),
-    'frm13' => array('bigtext', FALSE, 'Campo 1'),
-    'frm14' => array('bigtext', FALSE, 'Campo 2'),
-    'frm15' => array('bigtext', FALSE, 'Campo 3'),
-    'frm16' => array('bigtext', FALSE, 'Campo 4'),
+	'frm11' => array('hugtext', FALSE, 'Detalhes'),
+    'frm13' => array('bigtext', FALSE, 'Valor'),
+    'frm14' => array('bigtext', FALSE, 'Quantidade'),
+    'frm15' => array('bigtext', FALSE, 'Campo 1'),
+    'frm16' => array('bigtext', FALSE, 'Campo 2'),
 	'frm20' => array('array', FALSE, 'Upload Imagens'),
 	'frm100' => array('array', FALSE, 'Upload Imagens - Legenda'),
-    'frm30' => array('array', FALSE, 'Upload Arquivos'),
-	'frm200' => array('array', FALSE, 'Upload Arquivos - Legenda'),
 );
 
 if ($website->form_checktrigger()) {
@@ -87,7 +84,7 @@ if ($website->form_checktrigger()) {
 	
 	if ($website->form_status == 'ALLOW') {			
 		// STRING FOR DATABASE
-		$sql = "INSERT INTO sdk_produtos VALUES (NULL, '".$website->db_hashfield('sdk_produtos')."', '".$website->form_values['frm2n']."', '".$website->form_values['frm10']."', '".$website->form_values['frm7']."', '".$website->form_values['frm1']."', ".$website->form_values['frm3n'].", ".$website->form_values['frm4n'].", '".$website->form_values['frm5']."', '".$website->form_values['frm6']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$website->form_values['frm11']."', '".$website->form_values['frm20n']."', '".$website->form_values['frm30n']."', '".$website->form_values['frm12']."', '".$website->form_values['frm13']."', '".$website->form_values['frm14']."', '".$website->form_values['frm15']."', '".$website->form_values['frm16']."', '".$website->form_values['frm8']."', '".$website->form_values['frm9']."', 0)";
+		$sql = "INSERT INTO sdk_produtos VALUES (NULL, '".$website->db_hashfield('sdk_produtos')."', '".$website->form_values['frm2n']."', '".$website->form_values['frm10']."', '".$website->form_values['frm7']."', '".$website->form_values['frm1']."', ".$website->form_values['frm3n'].", ".$website->form_values['frm4n'].", '".$website->form_values['frm5']."', '".$website->form_values['frm6']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$website->form_values['frm11']."', '".$website->form_values['frm20n']."', ".$website->form_values['frm13'].", ".$website->form_values['frm14'].", '".$website->form_values['frm15']."', '".$website->form_values['frm16']."', '".$website->form_values['frm8']."', '".$website->form_values['frm9']."', 0)";
 		$website->sql_db($sql);					
 		
 	    $website->page_redirect('produtos.php');
@@ -105,7 +102,7 @@ if ($website->form_checktrigger()) {
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <LINK REL="SHORTCUT ICON" href="favicon.png">
-<title><?php echo $website->get_string(73); ?> - <?php echo $website->get_string(3); ?></title>
+<title><?php echo $website->get_string(73); ?> - <?php echo $website->get_string(113); ?></title>
 
 <?php $website->call_header(); ?>
 </head>
@@ -117,12 +114,12 @@ if ($website->form_checktrigger()) {
 
   <div class="row">
     
-    <?php $website->call_menu(3); ?>
+    <?php $website->call_menu(14); ?>
     
     <div class="col-xs-10">
 	  <div class="row">
     	<div class="col-xs-12 rt_cnttit">
-          <h1><i class="fa fa-clipboard fa-2x"></i><span class="rt_cnttxt"><?php echo $website->get_string(3); ?></span> <small><?php echo $website->get_string(15); ?></small><?php $website->call_back('produtos.php'); ?></h1>
+          <h1><i class="fa fa-shopping-cart fa-2x"></i><span class="rt_cnttxt"><?php echo $website->get_string(113); ?></span> <small><?php echo $website->get_string(15); ?></small><?php $website->call_back('produtos.php'); ?></h1>
         </div>
       </div>
       <div class="row">
@@ -176,7 +173,7 @@ if ($website->form_checktrigger()) {
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="frm6" class="col-sm-3 control-label"><?php echo $website->get_string(28); ?></label>
+                    <label for="frm6" class="col-sm-3 control-label"><?php echo $website->get_string(114); ?></label>
                     <div class="col-sm-9 rt_d">
                       <input type="checkbox" id="frm6" name="f_frm6" value="1"<?php if ($website->form_fetchvalue('frm6') == 1) echo ' checked="checked"'; ?>>
                     </div>
@@ -236,29 +233,25 @@ if ($website->form_checktrigger()) {
                 <?php if (in_array('frm10', $website->form_wrong)) echo '<span class="glyphicon glyphicon-remove form-control-feedback"></span>'; ?>
               </div>
               <div class="form-group">
-                <label for="frm11"><?php echo $website->get_string(51); ?></label>
+                <label for="frm11"><?php echo $website->get_string(115); ?></label>
                 <textarea class="form-control ckeditor" id="frm11" name="f_frm11"><?php echo $website->form_fetchvalue('frm11'); ?></textarea>
               </div>
               <?php $website->call_modules(); ?>
               <div class="form-group">
-                <label for="frm12"><?php echo $website->get_string(56); ?></label>
-                <textarea class="form-control" id="frm12" name="f_frm12" placeholder="<?php echo $website->get_string(56); ?>"><?php echo $website->form_fetchvalue('frm12'); ?></textarea>
+                <label class="control-label" for="frm13"><?php echo $website->get_string(116); ?></label>
+                <input type="text" class="form-control" id="frm13" placeholder="<?php echo $website->get_string(116); ?>" name="f_frm13" value="<?php echo $website->form_fetchvalue('frm13'); ?>">
               </div>
               <div class="form-group">
-                <label class="control-label" for="frm13"><?php echo $website->get_string(52); ?></label>
-                <input type="text" class="form-control" id="frm13" placeholder="<?php echo $website->get_string(52); ?>" name="f_frm13" value="<?php echo $website->form_fetchvalue('frm13'); ?>">
+                <label class="control-label" for="frm14"><?php echo $website->get_string(117); ?></label>
+                <input type="text" class="form-control" id="frm14" placeholder="<?php echo $website->get_string(117); ?>" name="f_frm14" value="<?php echo $website->form_fetchvalue('frm14'); ?>">
               </div>
               <div class="form-group">
-                <label class="control-label" for="frm14"><?php echo $website->get_string(53); ?></label>
-                <input type="text" class="form-control" id="frm14" placeholder="<?php echo $website->get_string(53); ?>" name="f_frm14" value="<?php echo $website->form_fetchvalue('frm14'); ?>">
+                <label class="control-label" for="frm15"><?php echo $website->get_string(52); ?></label>
+                <input type="text" class="form-control" id="frm15" placeholder="<?php echo $website->get_string(52); ?>" name="f_frm15" value="<?php echo $website->form_fetchvalue('frm15'); ?>">
               </div>
               <div class="form-group">
-                <label class="control-label" for="frm15"><?php echo $website->get_string(54); ?></label>
-                <input type="text" class="form-control" id="frm15" placeholder="<?php echo $website->get_string(54); ?>" name="f_frm15" value="<?php echo $website->form_fetchvalue('frm15'); ?>">
-              </div>
-              <div class="form-group">
-                <label class="control-label" for="frm16"><?php echo $website->get_string(79); ?></label>
-                <input type="text" class="form-control" id="frm16" placeholder="<?php echo $website->get_string(79); ?>" name="f_frm16" value="<?php echo $website->form_fetchvalue('frm16'); ?>">
+                <label class="control-label" for="frm16"><?php echo $website->get_string(53); ?></label>
+                <input type="text" class="form-control" id="frm16" placeholder="<?php echo $website->get_string(53); ?>" name="f_frm16" value="<?php echo $website->form_fetchvalue('frm16'); ?>">
               </div>
               <div class="form-group rt_f">
                 <button type="submit" class="btn btn-success" name="f_send" value="Salvar"><?php echo $website->get_string(68); ?></button>

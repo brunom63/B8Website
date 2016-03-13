@@ -680,5 +680,41 @@
 	<german></german>
 </string113>
 
+<string114>
+	<portuguese>Finalizado</portuguese>
+	<english>Closed</english>
+	<german></german>
+</string114>
+
+<string115>
+	<portuguese>Detalhes</portuguese>
+	<english>Details</english>
+	<german></german>
+</string115>
+
+<string116>
+	<portuguese>Valor</portuguese>
+	<english>Price</english>
+	<german></german>
+</string116>
+
+<string117>
+	<portuguese>Quantidade</portuguese>
+	<english>Quantity</english>
+	<german></german>
+</string117>
+
+<string118>
+	<portuguese>Item marcado como finalizado.</portuguese>
+	<english>Item marked as closed.</english>
+	<german></german>
+</string118>
+
+<string119>
+	<portuguese>Item desmarcado como finalizado.</portuguese>
+	<english>Item unmarked as closed.</english>
+	<german></german>
+</string119>
+
 
 </strings>

@@ -88,7 +88,7 @@ if (isset($_REQUEST['l_status']) && isset($_REQUEST['f'])) {
 	$website->str_error = ($new_v == 1) ? $website->get_string(98) : $website->get_string(99);
 	$website->str_error_type = 1;			
 }
-if (isset($_REQUEST['l_destaque']) && isset($_REQUEST['f'])) {
+if (isset($_REQUEST['l_finalizado']) && isset($_REQUEST['f'])) {
 	$opts_id = $website->validate_hash('sdk_produtos', $_REQUEST['f']);
 	if (!$opts_id) $website->page_redirect('atencao.php');
 	
@@ -96,12 +96,12 @@ if (isset($_REQUEST['l_destaque']) && isset($_REQUEST['f'])) {
 	$result = $website->sql_db($query);
 	$line = $website->fetch_array_db($result);
 	
-	$new_v = ($line['dt_destaque'] == 1) ? 0 : 1;
+	$new_v = ($line['dt_finalizado'] == 1) ? 0 : 1;
 	
-	$sql = "UPDATE sdk_produtos SET dt_destaque=".$new_v." WHERE dt_id=".$opts_id;
+	$sql = "UPDATE sdk_produtos SET dt_finalizado=".$new_v." WHERE dt_id=".$opts_id;
 	$website->sql_db($sql);
 	
-	$website->str_error = ($new_v == 1) ? $website->get_string(100) : $website->get_string(101);
+	$website->str_error = ($new_v == 1) ? $website->get_string(118) : $website->get_string(119);
 	$website->str_error_type = 1;			
 }
 
@@ -128,7 +128,7 @@ if (isset($_POST['p_limpar'])) {
 	$website->page = 1;
 }
 $website->items = $website->search_results($website->items, array('dt_titulo', 'dt_corpo', 'dt_campo1', 'dt_campo2', 'dt_campo3'));
-$website->items = $website->order_results($website->items, array(1 => 'dt_titulo', 2 => 'dt_ativado', 3 => 'dt_destaque',
+$website->items = $website->order_results($website->items, array(1 => 'dt_titulo', 2 => 'dt_ativado', 3 => 'dt_finalizado',
 										4 => 'dt_pai_titulo', 5 => 'dt_criado_data', 6 => 'dt_hits', 7 => 'dt_id'));
 $website->page_arr = $website->page_results($website->items, 10, 10);
 
@@ -140,7 +140,7 @@ $website->page_arr = $website->page_results($website->items, 10, 10);
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <LINK REL="SHORTCUT ICON" href="favicon.png">
-<title><?php echo $website->get_string(73); ?> - <?php echo $website->get_string(3); ?></title>
+<title><?php echo $website->get_string(73); ?> - <?php echo $website->get_string(113); ?></title>
 
 <?php $website->call_header(); ?>
 </head>
@@ -152,12 +152,12 @@ $website->page_arr = $website->page_results($website->items, 10, 10);
 
   <div class="row">
     
-    <?php $website->call_menu(3); ?>
+    <?php $website->call_menu(14); ?>
     
     <div class="col-xs-10">
 	  <div class="row">
     	<div class="col-xs-12 rt_cnttit">
-          <h1><i class="fa fa-clipboard fa-2x"></i><span class="rt_cnttxt"><?php echo $website->get_string(3); ?></span><?php $website->call_back('main.php'); ?></h1>
+          <h1><i class="fa fa-shopping-cart fa-2x"></i><span class="rt_cnttxt"><?php echo $website->get_string(113); ?></span><?php $website->call_back('main.php'); ?></h1>
         </div>
       </div>
       <div class="row">
@@ -194,7 +194,7 @@ $website->page_arr = $website->page_results($website->items, 10, 10);
                     </th>
                     <th><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=1&order=<?php echo ($website->order == 1 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(26); ?><?php if ($website->order == 1) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
                     <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=2&order=<?php echo ($website->order == 2 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(27); ?><?php if ($website->order == 2) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
-                    <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=3&order=<?php echo ($website->order == 3 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(28); ?><?php if ($website->order == 3) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
+                    <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=3&order=<?php echo ($website->order == 3 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(114); ?><?php if ($website->order == 3) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
                     <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=4&order=<?php echo ($website->order == 4 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(29); ?><?php if ($website->order == 4) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
                     <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=5&order=<?php echo ($website->order == 5 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(30); ?><?php if ($website->order == 5) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
                     <th class="text-center"><a class="rg_g" href="produtos.php?<?php echo 'q='.$website->query.'&'; ?>o=6&order=<?php echo ($website->order == 6 && $website->order_direction == 'asc') ? 'desc' : 'asc'; ?>"><?php echo $website->get_string(31); ?><?php if ($website->order == 6) { if ($website->order_direction == 'asc') { ?>&nbsp;<i class="fa fa-sort-amount-asc"></i><?php } else { ?>&nbsp;<i class="fa fa-sort-amount-desc"></i><?php } } ?></a></th>
@@ -207,7 +207,7 @@ $website->page_arr = $website->page_results($website->items, 10, 10);
                     <td><label><input class="checkbx" type="checkbox" name="f_opts[]" value="<?php echo $item['dt_hash']; ?>"></label></td>
                     <td><a href="produtos_editar.php?i=<?php echo $item['dt_hash']; ?>"><?php echo $item['dt_titulo']; ?></a></td>
                     <td class="text-center"><a href="produtos.php?<?php echo 'p='.$website->page.'&'.'q='.$website->query.'&'.'o='.$website->order.'&'.'order='.$website->order_direction.'&'; ?>l_status=&f=<?php echo $item['dt_hash']; ?>"><?php echo ($item['dt_ativado'] == 1) ? '<i class="fa fa-check-circle text-success"></i>' : '<i class="fa fa-circle text-danger"></i>'; ?></a></td>
-                    <td class="text-center"><a href="produtos.php?<?php echo 'p='.$website->page.'&'.'q='.$website->query.'&'.'o='.$website->order.'&'.'order='.$website->order_direction.'&'; ?>l_destaque=&f=<?php echo $item['dt_hash']; ?>"><?php echo ($item['dt_destaque'] == 1) ? '<i class="fa fa-check-circle text-success"></i>' : '<i class="fa fa-circle text-danger"></i>'; ?></a></td>
+                    <td class="text-center"><a href="produtos.php?<?php echo 'p='.$website->page.'&'.'q='.$website->query.'&'.'o='.$website->order.'&'.'order='.$website->order_direction.'&'; ?>l_finalizado=&f=<?php echo $item['dt_hash']; ?>"><?php echo ($item['dt_finalizado'] == 1) ? '<i class="fa fa-check-circle text-success"></i>' : '<i class="fa fa-circle text-danger"></i>'; ?></a></td>
                     <td class="text-center"><?php
 						if ($item['dt_categoria'] != "" && $item['dt_categoria'] != 0) {
 							echo $item['dt_pai_titulo'];
