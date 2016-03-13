@@ -21,8 +21,8 @@ $website->form_populate = array(
 	'frm9'  => array('hugtext', FALSE, 'Meta Tags'),	
 	'frm10' => array('bigtext', TRUE, 'Título'),
 	'frm11' => array('hugtext', FALSE, 'Detalhes'),
-    'frm13' => array('bigtext', FALSE, 'Valor'),
-    'frm14' => array('bigtext', FALSE, 'Quantidade'),
+    'frm13' => array('number', FALSE, 'Valor'),
+    'frm14' => array('number', FALSE, 'Quantidade'),
     'frm15' => array('bigtext', FALSE, 'Campo 1'),
     'frm16' => array('bigtext', FALSE, 'Campo 2'),
 	'frm20' => array('array', FALSE, 'Upload Imagens'),
@@ -64,6 +64,9 @@ if ($website->form_checktrigger()) {
 		$website->form_values['frm2n'] = 0;
 	}
     
+    if ($website->form_values['frm13'] == "") $website->form_values['frm13'] = 0;
+	if ($website->form_values['frm14'] == "") $website->form_values['frm14'] = 0;
+    
     $website->form_values['frm20n'] = '';
     if (is_array($website->form_values['frm20'])) {
         $bd_gallery = array();
@@ -71,15 +74,6 @@ if ($website->form_checktrigger()) {
             $bd_gallery[] = $website->form_values['frm20'][$x].'++$$++'.$website->form_values['frm100'][$x];
         }
         $website->form_values['frm20n'] = implode('--$$--', $bd_gallery);
-    }
-    
-    $website->form_values['frm30n'] = '';
-    if (is_array($website->form_values['frm30'])) {
-        $bd_arquivos = array();
-        for ($x = 0; $x < count($website->form_values['frm30']); $x++) {
-            $bd_arquivos[] = $website->form_values['frm30'][$x].'++$$++'.$website->form_values['frm200'][$x];
-        }
-        $website->form_values['frm30n'] = implode('--$$--', $bd_arquivos);
     }
 	
 	if ($website->form_status == 'ALLOW') {			
@@ -237,13 +231,15 @@ if ($website->form_checktrigger()) {
                 <textarea class="form-control ckeditor" id="frm11" name="f_frm11"><?php echo $website->form_fetchvalue('frm11'); ?></textarea>
               </div>
               <?php $website->call_modules(); ?>
-              <div class="form-group">
-                <label class="control-label" for="frm13"><?php echo $website->get_string(116); ?></label>
+              <div class="form-group<?php if (in_array('frm13', $website->form_wrong)) echo ' has-error has-feedback'; ?>">
+                <label class="control-label" for="frm13"><?php echo $website->get_string(116); ?><?php if (in_array('frm13', $website->form_wrong)) echo '&nbsp;-&nbsp;<b>Use o ponto "." como decimal.</b>'; ?></label>
                 <input type="text" class="form-control" id="frm13" placeholder="<?php echo $website->get_string(116); ?>" name="f_frm13" value="<?php echo $website->form_fetchvalue('frm13'); ?>">
+                <?php if (in_array('frm13', $website->form_wrong)) echo '<span class="glyphicon glyphicon-remove form-control-feedback"></span>'; ?>
               </div>
-              <div class="form-group">
+              <div class="form-group<?php if (in_array('frm14', $website->form_wrong)) echo ' has-error has-feedback'; ?>">
                 <label class="control-label" for="frm14"><?php echo $website->get_string(117); ?></label>
                 <input type="text" class="form-control" id="frm14" placeholder="<?php echo $website->get_string(117); ?>" name="f_frm14" value="<?php echo $website->form_fetchvalue('frm14'); ?>">
+                <?php if (in_array('frm14', $website->form_wrong)) echo '<span class="glyphicon glyphicon-remove form-control-feedback"></span>'; ?>
               </div>
               <div class="form-group">
                 <label class="control-label" for="frm15"><?php echo $website->get_string(52); ?></label>
