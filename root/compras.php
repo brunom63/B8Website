@@ -183,7 +183,7 @@ $website->page_arr = $website->page_results($website->items, 10, 10);
                     <td class="text-center"><a href="compras.php?<?php echo 'p='.$website->page.'&'.'q='.$website->query.'&'.'o='.$website->order.'&'.'order='.$website->order_direction.'&'; ?>l_status=&f=<?php echo $item['dt_hash']; ?>"><?php echo ($item['dt_ativado'] == 1) ? '<i class="fa fa-check-circle text-success"></i>' : '<i class="fa fa-circle text-danger"></i>'; ?></a></td>
                     <td class="text-center"><a href="compras.php?<?php echo 'p='.$website->page.'&'.'q='.$website->query.'&'.'o='.$website->order.'&'.'order='.$website->order_direction.'&'; ?>l_finalizado=&f=<?php echo $item['dt_hash']; ?>"><?php echo ($item['dt_finalizado'] == 1) ? '<i class="fa fa-check-circle text-success"></i>' : '<i class="fa fa-circle text-danger"></i>'; ?></a></td>
                     <td class="text-center"><?php echo date("d/m/Y", $item['dt_data_compra']); ?></td>
-                    <td class="text-center"><?php echo date("d/m/Y", $item['dt_data_entrega']); ?></td>
+                    <td class="text-center"><?php echo ($item['dt_data_entrega'] != '') ? date("d/m/Y", $item['dt_data_entrega']) : '-'; ?></td>
                     <td class="text-center"><?php echo $item['dt_valor']; ?></td>
                     <td class="text-center"><?php echo $item['dt_id']; ?></td>
                   </tr>
