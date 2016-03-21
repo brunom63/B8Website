@@ -716,5 +716,77 @@
 	<german></german>
 </string119>
 
+<string120>
+	<portuguese>Compras</portuguese>
+	<english>Purchases</english>
+	<german></german>
+</string120>
+
+<string121>
+	<portuguese>Cadastrado</portuguese>
+	<english>Member</english>
+	<german></german>
+</string121>
+
+<string122>
+	<portuguese>Produto</portuguese>
+	<english>Product</english>
+	<german></german>
+</string122>
+
+<string123>
+	<portuguese>Data Compra</portuguese>
+	<english>Date Purchase</english>
+	<german></german>
+</string123>
+
+<string124>
+	<portuguese>Data Entrega</portuguese>
+	<english>Date Delivered</english>
+	<german></german>
+</string124>
+
+<string125>
+	<portuguese>Código</portuguese>
+	<english>Code</english>
+	<german></german>
+</string125>
+
+<string126>
+	<portuguese>Produto ID</portuguese>
+	<english>Product ID</english>
+	<german></german>
+</string126>
+
+<string127>
+	<portuguese>Compra ID</portuguese>
+	<english>Purchase ID</english>
+	<german></german>
+</string127>
+
+<string128>
+	<portuguese>Cadastrado ID</portuguese>
+	<english>Member ID</english>
+	<german></german>
+</string128>
+
+<string129>
+	<portuguese>CEP</portuguese>
+	<english>ZIP Code</english>
+	<german></german>
+</string129>
+
+<string130>
+	<portuguese>Endereço</portuguese>
+	<english>Address</english>
+	<german></german>
+</string130>
+
+<string131>
+	<portuguese>Frete</portuguese>
+	<english>Freight</english>
+	<german></german>
+</string131>
+
 
 </strings>

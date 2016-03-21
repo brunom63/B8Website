@@ -80,6 +80,13 @@ if ($website->p_id == 0) $website->page_redirect('index.php');
                 <p><span class="rt_bdyico"><?php echo $website->get_string(113); ?></span></p>
               </a>
             </div>
+            <?php } if (in_array(15, $website->user_permissao)) { ?>
+            <div class="col-xs-4 text-center">
+              <a class="rt_bdymn" href="compras.php">
+                <i class="fa fa-money fa-4x"></i>
+                <p><span class="rt_bdyico"><?php echo $website->get_string(120); ?></span></p>
+              </a>
+            </div>
             <?php } if (in_array(8, $website->user_permissao)) { ?>
             <div class="col-xs-4 text-center">
               <a class="rt_bdymn" href="newsletters.php">

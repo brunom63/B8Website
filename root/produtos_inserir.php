@@ -4,7 +4,7 @@ include 'include/include.php';
 $website = new B8Admin();
 
 if ($website->p_id == 0) $website->page_redirect('index.php');
-if (!in_array(2, $website->user_permissao)) $website->page_redirect('index.php');
+if (!in_array(14, $website->user_permissao)) $website->page_redirect('index.php');
 
 $website->modules_list = array('datetimepicker', 'ckfinder', 'multiupload');
 	

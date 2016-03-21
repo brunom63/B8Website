@@ -99,6 +99,9 @@ a:focus {
 	font-weight: bold;
 	padding: 10px;
 }
+.rt_fixtext {
+    padding-top: 7px;
+}
 
 /* Tables */
 .rt_tbrw {

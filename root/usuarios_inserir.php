@@ -243,6 +243,10 @@ if ($website->form_checktrigger()) {
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm114" name="f_frm100[]" value="14"<?php if (!isset($website->form_values['frm100']) || in_array(14, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>
                                 </div>
+                                <label for="frm115" class="col-sm-2 control-label"><?php echo $website->get_string(120); ?></label>
+                                <div class="col-sm-1 rt_d">
+                                  <input type="checkbox" id="frm115" name="f_frm100[]" value="15"<?php if (!isset($website->form_values['frm100']) || in_array(15, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>
+                                </div>
                                 <label for="frm108" class="col-sm-2 control-label"><?php echo $website->get_string(6); ?></label>
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm108" name="f_frm100[]" value="8"<?php if (!isset($website->form_values['frm100']) || in_array(8, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>
@@ -251,6 +255,8 @@ if ($website->form_checktrigger()) {
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm109" name="f_frm100[]" value="9"<?php if (!isset($website->form_values['frm100']) || in_array(9, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <label for="frm110" class="col-sm-2 control-label"><?php echo $website->get_string(8); ?></label>
                                 <div class="col-sm-1 rt_d">
                                   <input type="checkbox" id="frm110" name="f_frm100[]" value="10"<?php if (!isset($website->form_values['frm100']) || in_array(10, $website->form_values['frm100'])) echo ' checked="checked"'; ?>>

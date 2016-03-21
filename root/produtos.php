@@ -4,7 +4,7 @@ include 'include/include.php';
 $website = new B8Admin();
 
 if ($website->p_id == 0) $website->page_redirect('index.php');
-if (!in_array(2, $website->user_permissao)) $website->page_redirect('index.php');
+if (!in_array(14, $website->user_permissao)) $website->page_redirect('index.php');
 
 $website->modules_list = array('multiselect');
 
@@ -127,7 +127,7 @@ if (isset($_POST['p_limpar'])) {
 	$website->order_direction = 'desc';
 	$website->page = 1;
 }
-$website->items = $website->search_results($website->items, array('dt_titulo', 'dt_corpo', 'dt_campo1', 'dt_campo2', 'dt_campo3'));
+$website->items = $website->search_results($website->items, array('dt_titulo', 'dt_corpo'));
 $website->items = $website->order_results($website->items, array(1 => 'dt_titulo', 2 => 'dt_ativado', 3 => 'dt_finalizado',
 										4 => 'dt_pai_titulo', 5 => 'dt_criado_data', 6 => 'dt_hits', 7 => 'dt_id'));
 $website->page_arr = $website->page_results($website->items, 10, 10);
