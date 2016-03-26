@@ -15,6 +15,7 @@ $website->form_populate = array(
 	'frm4'  => array('bigtext', FALSE, 'Data Fim'),
 	'frm5'  => array('number', FALSE, 'Ativado'),
 	'frm6'  => array('number', FALSE, 'Finalizado'),
+    'frm7'  => array('number', FALSE, 'Pagamento'),
 );	
 	
 if ($website->form_checktrigger()) {
@@ -37,7 +38,7 @@ if ($website->form_checktrigger()) {
     
 	if ($website->form_status == 'ALLOW') {			
 		// STRING FOR DATABASE
-		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6']." WHERE ".$website->db_id."=".$website->item_id;
+		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6'].", dt_pagamento=".$website->form_values['frm7']." WHERE ".$website->db_id."=".$website->item_id;
 		$website->sql_db($sql);					
 		
 	    $website->form_values = array();
@@ -183,6 +184,11 @@ $produto = $website->fetch_array_db($result);
               <div class="form-group">
                 <label for="frm11"><?php echo $website->get_string(131); ?></label>
                 <p><?php echo $website->item['dt_frete']; ?></p>
+              </div>
+              <div class="form-group<?php if (in_array('frm7', $website->form_wrong)) echo ' has-error has-feedback'; ?>">
+                <label for="frm7" class="control-label"><?php echo $website->get_string(132); ?></label>
+                <input type="text" class="form-control" id="frm7" name="f_frm7" placeholder="<?php echo $website->get_string(132); ?>" value="<?php echo $website->form_fetchvalue('frm7', $website->item['dt_pagamento']); ?>">
+                <?php if (in_array('frm7', $website->form_wrong)) echo '<span class="glyphicon glyphicon-remove form-control-feedback"></span>'; ?>
               </div>
               <div class="form-group<?php if (in_array('frm4', $website->form_wrong)) echo ' has-error has-feedback'; ?>">
                 <label for="frm4" class="control-label"><?php echo $website->get_string(124); ?></label>
