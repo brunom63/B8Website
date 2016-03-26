@@ -8,7 +8,7 @@ if (!in_array(15, $website->user_permissao)) $website->page_redirect('index.php'
 	
 $website->item_id = $website->db_validate('sdk_compras');
 
-$website->modules_list = array('datetimepicker');
+$website->modules_list = array('datetimepicker', 'multifileupload-e');
 
 $website->form_trigger = 'f_send';
 $website->form_populate = array(
@@ -16,6 +16,8 @@ $website->form_populate = array(
 	'frm5'  => array('number', FALSE, 'Ativado'),
 	'frm6'  => array('number', FALSE, 'Finalizado'),
     'frm7'  => array('number', FALSE, 'Pagamento'),
+    'frm30' => array('array', FALSE, 'Upload Arquivos'),
+	'frm200' => array('array', FALSE, 'Upload Arquivos - Legenda'),
 );	
 	
 if ($website->form_checktrigger()) {
@@ -36,9 +38,18 @@ if ($website->form_checktrigger()) {
 	if ($website->form_values['frm5'] == "") $website->form_values['frm5'] = 0;
 	if ($website->form_values['frm6'] == "") $website->form_values['frm6'] = 0;
     
+    $website->form_values['frm30n'] = '';
+    if (is_array($website->form_values['frm30'])) {
+        $bd_arquivos = array();
+        for ($x = 0; $x < count($website->form_values['frm30']); $x++) {
+            $bd_arquivos[] = $website->form_values['frm30'][$x].'++$$++'.$website->form_values['frm200'][$x];
+        }
+        $website->form_values['frm30n'] = implode('--$$--', $bd_arquivos);
+    }
+    
 	if ($website->form_status == 'ALLOW') {			
 		// STRING FOR DATABASE
-		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6'].", dt_pagamento=".$website->form_values['frm7']." WHERE ".$website->db_id."=".$website->item_id;
+		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6'].", dt_pagamento=".$website->form_values['frm7'].", dt_arquivos='".$website->form_values['frm30n']."' WHERE ".$website->db_id."=".$website->item_id;
 		$website->sql_db($sql);					
 		
 	    $website->form_values = array();
@@ -195,6 +206,7 @@ $produto = $website->fetch_array_db($result);
                 <input type="text" class="form-control datepick" id="frm4" name="f_frm4" placeholder="<?php echo $website->get_string(124); ?>" value="<?php echo $website->form_fetchvalue('frm4', ($website->item['dt_data_entrega'] == "" || $website->item['dt_data_entrega'] == 0) ? '' : date("d/m/Y H:i", $website->item['dt_data_entrega'])); ?>">
                 <?php if (in_array('frm4', $website->form_wrong)) echo '<span class="glyphicon glyphicon-remove form-control-feedback"></span>'; ?>
               </div>
+              <?php $website->call_modules(); ?>
               <div class="form-group rt_f">
                 <button type="submit" class="btn btn-success" name="f_send" value="Salvar"><?php echo $website->get_string(68); ?></button>
               </div>
