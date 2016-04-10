@@ -52,6 +52,10 @@ class B8 {
 	public $form_pref = 'f_';
 	public $form_errorstyle = '';
     
+    public $payment = '';
+    public $payment_use = TRUE;
+    public $payment_type = 0;
+    
     /*
      * Encryption
      */
@@ -315,6 +319,14 @@ class B8 {
         }
 
         return FALSE;
+    }
+    
+    public function get_hashbyid ($tb_name, $tb_id) {
+        $query = 'SELECT * FROM '.$tb_name.' WHERE '.$this->db_id.'='.$tb_id;
+        $result = $this->sql_db($query);
+
+        $line = $this->fetch_array_db($result);
+        return $line['dt_hash'];
     }
     
     /*
@@ -730,6 +742,15 @@ class B8 {
         }
 
         return $return;
+    }
+    
+    /*
+     * Payments
+     */
+    public function payment_init () {
+        if ($this->payment_type == 1) {
+            if (!$this->payment->paypal_checkout()) $this->page_redirect('atencao.php?paypal_error');
+        }
     }
 }
 

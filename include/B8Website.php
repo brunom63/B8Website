@@ -1,6 +1,7 @@
 <?php
 require 'B8.php';
 require 'B8DataBase.php';
+require 'B8Payments.php';
 
 class B8Website extends B8 {
 	
@@ -29,6 +30,10 @@ class B8Website extends B8 {
             if (!$this->db_connection) {
                 $this->error_redirect($this->error_page, 'er=db-fail');
             }
+        }
+        
+        if ($this->payment_use) {
+            $this->payment = new B8Payments();
         }
 
 		$this->data_hj = time();
