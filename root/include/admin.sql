@@ -50,7 +50,7 @@ CREATE TABLE `sdk_admlogin` (
 
 LOCK TABLES `sdk_admlogin` WRITE;
 /*!40000 ALTER TABLE `sdk_admlogin` DISABLE KEYS */;
-INSERT INTO `sdk_admlogin` VALUES (1,'DJmJJKLMiOPa','bruno','$2a$08$Q5FdPF1YtlEuXG/dVO7v5.yqD3b4CrSZnlzsqYi9DBIGdmEzg0M9W',1,'1440441916,1453915487,1453931462,1453980839,1454020330,1454067036,1454152975,1454176735,1454211879',NULL,NULL,1,NULL,NULL,1454027099,'','Bruno','','1,2,7,3,8,9,10',NULL);
+INSERT INTO `sdk_admlogin` VALUES (1,'DJmJJKLMiOPa','bruno','$2a$08$Q5FdPF1YtlEuXG/dVO7v5.yqD3b4CrSZnlzsqYi9DBIGdmEzg0M9W',1,'1440441916,1453915487,1453931462,1453980839,1454020330,1454067036,1454152975,1454176735,1454211879,1454350571,1454431358,1457823914,1457842661,1457881396,1457889595,1458497420,1458996084,1462489275',NULL,NULL,1,NULL,NULL,1458497494,'','Bruno','','1,2,7,3,14,15,8,9,10',NULL);
 /*!40000 ALTER TABLE `sdk_admlogin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -155,6 +155,43 @@ CREATE TABLE `sdk_categorias` (
 LOCK TABLES `sdk_categorias` WRITE;
 /*!40000 ALTER TABLE `sdk_categorias` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sdk_categorias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sdk_compras`
+--
+
+DROP TABLE IF EXISTS `sdk_compras`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sdk_compras` (
+  `dt_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dt_hash` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `dt_produto` bigint(20) NOT NULL,
+  `dt_cadastrado` bigint(20) NOT NULL,
+  `dt_data_compra` int(11) DEFAULT NULL,
+  `dt_data_entrega` int(11) DEFAULT NULL,
+  `dt_ativado` int(11) DEFAULT NULL,
+  `dt_finalizado` int(11) DEFAULT NULL,
+  `dt_pagamento` int(11) DEFAULT NULL,
+  `dt_detalhes` text CHARACTER SET latin1,
+  `dt_valor` decimal(10,2) DEFAULT NULL,
+  `dt_quantidade` int(11) DEFAULT NULL,
+  `dt_frete` decimal(10,2) DEFAULT NULL,
+  `dt_cep` varchar(20) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_endereco` varchar(200) DEFAULT NULL,
+  `dt_arquivos` text,
+  PRIMARY KEY (`dt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sdk_compras`
+--
+
+LOCK TABLES `sdk_compras` WRITE;
+/*!40000 ALTER TABLE `sdk_compras` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sdk_compras` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -318,6 +355,49 @@ LOCK TABLES `sdk_posts` WRITE;
 /*!40000 ALTER TABLE `sdk_posts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sdk_posts` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `sdk_produtos`
+--
+
+DROP TABLE IF EXISTS `sdk_produtos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sdk_produtos` (
+  `dt_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `dt_hash` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `dt_categoria` int(11) DEFAULT NULL,
+  `dt_titulo` varchar(300) CHARACTER SET latin1 NOT NULL,
+  `dt_alias` varchar(300) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_autor` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_data_inicio` int(11) DEFAULT NULL,
+  `dt_data_fim` int(11) DEFAULT NULL,
+  `dt_ativado` int(11) DEFAULT NULL,
+  `dt_finalizado` int(11) DEFAULT NULL,
+  `dt_criado_por` bigint(20) DEFAULT NULL,
+  `dt_criado_data` int(11) DEFAULT NULL,
+  `dt_alterado_data` int(11) DEFAULT NULL,
+  `dt_detalhes` text CHARACTER SET latin1,
+  `dt_galeria` text CHARACTER SET latin1,
+  `dt_valor` decimal(10,2) DEFAULT NULL,
+  `dt_quantidade` int(11) DEFAULT NULL,
+  `dt_campo1` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_campo2` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_meta_descricao` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
+  `dt_meta_tags` text CHARACTER SET latin1,
+  `dt_hits` int(11) DEFAULT NULL,
+  PRIMARY KEY (`dt_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sdk_produtos`
+--
+
+LOCK TABLES `sdk_produtos` WRITE;
+/*!40000 ALTER TABLE `sdk_produtos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sdk_produtos` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -328,4 +408,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-01-31  1:46:49
+-- Dump completed on 2016-05-05 20:03:14
