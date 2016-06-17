@@ -752,6 +752,45 @@ class B8 {
             if (!$this->payment->paypal_checkout()) $this->page_redirect('atencao.php?paypal_error');
         }
     }
+    
+    /*
+     * Networking
+     */
+    public function net_request ($url, $method = NULL, $headers = NULL, $data = NULL) {
+        if ($method == NULL) $method = 'GET';
+        if ($method == 'POST' && $data == NULL) return FALSE;
+       
+        $options = array(
+            'http' => array(
+                'method'  => $method,
+                'timeout' => 15
+            )
+        );
+        if ($data != NULL) $options['http']['content'] = http_build_query($data);
+        if ($headers != NULL) {
+            $hdr = '';
+            foreach ($headers as $hdk => $hdv) {
+                $hdr .= $hdk.': '.$hdv.PHP_EOL;
+            }
+            $options['http']['header'] = $hdr;
+        }
+       
+        $context = stream_context_create($options);
+       
+        return @file_get_contents($url, false, $context);
+
+    }
+   
+    /*
+     * Varnish
+     */
+    public function varnish_purge ($urls) {
+        foreach ($urls as $url) {
+            $urlinfo = parse_url($url);
+           
+            return (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'default'))) ? FALSE : TRUE;
+        }
+    }
 }
 
 ?>
