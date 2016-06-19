@@ -790,7 +790,21 @@ class B8 {
         foreach ($urls as $url) {
             $urlinfo = parse_url($url);
 
-            if (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'default'))) {
+            if (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'purge'))) {
+                $ret = FALSE;
+            }
+        }
+
+        return $ret;
+    }
+
+    public function varnish_ban ($urls) {
+        $ret = TRUE;
+
+        foreach ($urls as $url) {
+            $urlinfo = parse_url($url);
+
+            if (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'ban'))) {
                 $ret = FALSE;
             }
         }
