@@ -785,11 +785,17 @@ class B8 {
      * Varnish
      */
     public function varnish_purge ($urls) {
+        $ret = TRUE;
+
         foreach ($urls as $url) {
             $urlinfo = parse_url($url);
-           
-            return (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'default'))) ? FALSE : TRUE;
+
+            if (!$this->net_request($url, 'PURGE', array('host' => $urlinfo['host'], 'X-Purge-Method' => 'default'))) {
+                $ret = FALSE;
+            }
         }
+
+        return $ret;
     }
 }
 
