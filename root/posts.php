@@ -54,7 +54,7 @@ if (isset($_POST['a_remover']) || isset($_POST['a_ativar']) || isset($_POST['a_d
 					$dates_arr['dt_data_inicio'] = ($line['dt_data_inicio'] == "") ? 'NULL' : $line['dt_data_inicio']; 
 					$dates_arr['dt_data_fim'] = ($line['dt_data_fim'] == "") ? 'NULL' : $line['dt_data_fim'];
 			
-					$sql = "INSERT INTO sdk_posts VALUES (NULL, '".$website->db_hashfield('sdk_posts')."', '".$line['dt_pai']."', '".$line['dt_titulo'].' - NOVO'."', '".$line['dt_alias']."', '".$line['dt_autor']."', ".$dates_arr['dt_data_inicio'].", ".$dates_arr['dt_data_fim'].", '".$line['dt_ativado']."', '".$line['dt_destaque']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$line['dt_corpo']."', '".$line['dt_galeria']."', '".$line['dt_codigo']."', '".$line['dt_campo1']."', '".$line['dt_campo2']."', '".$line['dt_campo3']."', '".$line['dt_campo4']."', '".$line['dt_meta_descricao']."', '".$line['dt_meta_tags']."', 0)";
+					$sql = "INSERT INTO sdk_posts VALUES (NULL, '".$website->db_hashfield('sdk_posts')."', '".$line['dt_pai']."', '".$line['dt_titulo'].' - NOVO'."', '".$line['dt_alias']."', '".$line['dt_autor']."', ".$dates_arr['dt_data_inicio'].", ".$dates_arr['dt_data_fim'].", '".$line['dt_ativado']."', '".$line['dt_destaque']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$line['dt_corpo']."', '".$line['dt_galeria']."', '".$line['dt_arquivos']."', '".$line['dt_codigo']."', '".$line['dt_campo1']."', '".$line['dt_campo2']."', '".$line['dt_campo3']."', '".$line['dt_campo4']."', '".$line['dt_meta_descricao']."', '".$line['dt_meta_tags']."', 0)";
 					$website->sql_db($sql);
 				}
 		
