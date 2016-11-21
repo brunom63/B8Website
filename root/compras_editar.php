@@ -37,6 +37,7 @@ if ($website->form_checktrigger()) {
 	
 	if ($website->form_values['frm5'] == "") $website->form_values['frm5'] = 0;
 	if ($website->form_values['frm6'] == "") $website->form_values['frm6'] = 0;
+    if ($website->form_values['frm7'] == "") $website->form_values['frm7'] = '';
     
     $website->form_values['frm30n'] = '';
     if (is_array($website->form_values['frm30'])) {
@@ -49,7 +50,7 @@ if ($website->form_checktrigger()) {
     
 	if ($website->form_status == 'ALLOW') {			
 		// STRING FOR DATABASE
-		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6'].", dt_pagamento=".$website->form_values['frm7'].", dt_arquivos='".$website->form_values['frm30n']."' WHERE ".$website->db_id."=".$website->item_id;
+		$sql = "UPDATE sdk_compras SET dt_data_entrega=".$website->form_values['frm4n'].", dt_ativado=".$website->form_values['frm5'].", dt_finalizado=".$website->form_values['frm6'].", dt_pagamento='".$website->form_values['frm7']."', dt_arquivos='".$website->form_values['frm30n']."' WHERE ".$website->db_id."=".$website->item_id;
 		$website->sql_db($sql);					
 		
 	    $website->form_values = array();
