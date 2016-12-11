@@ -76,7 +76,7 @@ if ($website->form_checktrigger()) {
 	
 	if ($website->form_status == 'ALLOW') {			
 		// STRING FOR DATABASE
-		$sql = "UPDATE sdk_categorias SET dt_cat_pai=".$website->form_values['frm2n'].", dt_cat_titulo='".$website->form_values['frm10']."', dt_cat_alias='".$website->form_values['frm7']."', dt_cat_autor='".$website->form_values['frm1']."', dt_cat_data_inicio=".$website->form_values['frm3n'].", dt_cat_data_fim=".$website->form_values['frm4n'].", dt_cat_ativado=".$website->form_values['frm5'].", dt_cat_destaque=".$website->form_values['frm6'].", dt_cat_alterado_data=".$website->data_hj.", dt_cat_corpo='".$website->form_values['frm11']."', dt_cat_meta_descricao='".$website->form_values['frm8']."', dt_cat_meta_tags='".$website->form_values['frm9']."' WHERE ".$website->db_id."=".$website->item_id;
+		$sql = "UPDATE sdk_categorias SET dt_cat_pai=".$website->form_values['frm2n'].", dt_cat_titulo='".$website->form_values['frm10']."', dt_cat_alias='".$website->form_values['frm7']."', dt_cat_autor='".$website->form_values['frm1']."', dt_cat_data_inicio=".$website->form_values['frm3n'].", dt_cat_data_fim=".$website->form_values['frm4n'].", dt_cat_ativado=".$website->form_values['frm5'].", dt_cat_destaque=".$website->form_values['frm6'].", dt_cat_alterado_data=".$website->data_hj.", dt_cat_corpo='".$website->form_values['frm11']."', dt_cat_galeria='".$website->form_values['frm20n']."', dt_cat_meta_descricao='".$website->form_values['frm8']."', dt_cat_meta_tags='".$website->form_values['frm9']."' WHERE ".$website->db_id."=".$website->item_id;
 		$website->sql_db($sql);					
 		
 	    $website->form_values = array();

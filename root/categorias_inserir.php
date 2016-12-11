@@ -70,7 +70,7 @@ if ($website->form_checktrigger()) {
     }
 	
 	if ($website->form_status == 'ALLOW') {			
-		$sql = "INSERT INTO sdk_categorias VALUES (NULL, '".$website->db_hashfield('sdk_categorias')."', '".$website->form_values['frm2n']."', '".$website->form_values['frm10']."', '".$website->form_values['frm7']."', '".$website->form_values['frm1']."', ".$website->form_values['frm3n'].", ".$website->form_values['frm4n'].", '".$website->form_values['frm5']."', '".$website->form_values['frm6']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$website->form_values['frm11']."', '".$website->form_values['frm8']."', '".$website->form_values['frm9']."', 0)";
+		$sql = "INSERT INTO sdk_categorias VALUES (NULL, '".$website->db_hashfield('sdk_categorias')."', '".$website->form_values['frm2n']."', '".$website->form_values['frm10']."', '".$website->form_values['frm7']."', '".$website->form_values['frm1']."', ".$website->form_values['frm3n'].", ".$website->form_values['frm4n'].", '".$website->form_values['frm5']."', '".$website->form_values['frm6']."', ".$website->p_id.", ".$website->data_hj.", NULL, '".$website->form_values['frm11']."', '".$website->form_values['frm20n']."', '".$website->form_values['frm8']."', '".$website->form_values['frm9']."', 0)";
 		$website->sql_db($sql);					
 		
 	    $website->page_redirect('categorias.php');
