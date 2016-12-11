@@ -141,7 +141,7 @@ CREATE TABLE `sdk_categorias` (
   `dt_cat_criado_data` int(11) DEFAULT NULL,
   `dt_cat_alterado_data` int(11) DEFAULT NULL,
   `dt_cat_corpo` text CHARACTER SET latin1,
-  `dt_cat_galeria` text,
+  `dt_galeria` text,
   `dt_cat_meta_descricao` varchar(200) CHARACTER SET latin1 DEFAULT NULL,
   `dt_cat_meta_tags` text CHARACTER SET latin1,
   `dt_cat_hits` int(11) DEFAULT NULL,
@@ -409,4 +409,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-11 15:11:01
+-- Dump completed on 2016-12-11 15:27:38
