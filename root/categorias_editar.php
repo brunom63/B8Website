@@ -8,7 +8,7 @@ $website->db_hash = 'dt_cat_hash';
 if ($website->p_id == 0) $website->page_redirect('index.php');
 if (!in_array(1, $website->user_permissao)) $website->page_redirect('index.php');
 
-$website->modules_list = array('datetimepicker', 'ckfinder');
+$website->modules_list = array('datetimepicker', 'ckfinder', 'multiupload-e');
 	
 $website->item_id = $website->db_validate('sdk_categorias');
 
@@ -24,7 +24,9 @@ $website->form_populate = array(
 	'frm8'  => array('bigtext', FALSE, 'Meta Descrição'),
 	'frm9'  => array('hugtext', FALSE, 'Meta Tags'),	
 	'frm10' => array('bigtext', TRUE, 'Título'),
-	'frm11' => array('hugtext', FALSE, 'Descrição')
+	'frm11' => array('hugtext', FALSE, 'Descrição'),
+	'frm20' => array('array', FALSE, 'Upload Imagens'),
+	'frm100' => array('array', FALSE, 'Upload Imagens - Legenda'),    
 );	
 	
 if ($website->form_checktrigger()) {
@@ -59,6 +61,15 @@ if ($website->form_checktrigger()) {
 	} else {
 		$website->form_values['frm2n'] = 0;
 	}
+    
+    $website->form_values['frm20n'] = '';
+    if (is_array($website->form_values['frm20'])) {
+        $bd_gallery = array();
+        for ($x = 0; $x < count($website->form_values['frm20']); $x++) {
+            $bd_gallery[] = $website->form_values['frm20'][$x].'++$$++'.$website->form_values['frm100'][$x];
+        }
+        $website->form_values['frm20n'] = implode('--$$--', $bd_gallery);
+    }
 	
 	if ($website->form_values['frm5'] == "") $website->form_values['frm5'] = 0;
 	if ($website->form_values['frm6'] == "") $website->form_values['frm6'] = 0;
@@ -226,6 +237,7 @@ $criado = $website->fetch_array_db($result);
                 <label for="frm11"><?php echo $website->get_string(46); ?></label>
                 <textarea class="form-control ckeditor" id="frm11" name="f_frm11"><?php echo $website->form_fetchvalue('frm11', $website->item['dt_cat_corpo']); ?></textarea>
               </div>
+              <?php $website->call_modules(); ?>
               <div class="form-group rt_f">
                 <button type="submit" class="btn btn-success" name="f_send" value="Salvar"><?php echo $website->get_string(68); ?></button>
               </div>
